@@ -67,5 +67,9 @@ let controlElevation = L.control.elevation({
 }).addTo(map);
 controlElevation.load("data/etappe6.gpx");
 
-let profileDiv = document.querySelector("#profile");
-//profileDiv.innerHTML = ""
+//let profileDiv = document.querySelector("#profile");
+let pulldown = document.querySelector("#pulldown");
+for (let Etappe of ETAPPEN){
+    console.log(etappe);
+    pulldown.innerHTML += `<option value="">Etappe${etappe.nr}: ${etappe.etappe}</option>`
+}
